@@ -1,0 +1,63 @@
+:root {
+    /* 黑魂色調 */
+    --souls-bg: #0a0a0a;
+    --souls-gold: #c2a64d;
+    --souls-blood: #8b0000;
+    --souls-text: #d1d1d1;
+    
+    /* 玻璃擬態設定 */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(12px);
+}
+
+body {
+    background-color: var(--souls-bg);
+    color: var(--souls-text);
+    font-family: 'Times New Roman', serif; /* 營造古典感 */
+}
+
+/* 1. 玻璃擬態卡片 */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* 2. 黑魂風格按鈕 */
+.souls-btn {
+    background: transparent;
+    border: 1px solid var(--souls-gold);
+    color: var(--souls-gold);
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+.souls-btn:hover {
+    background: var(--souls-gold);
+    color: #000;
+    box-shadow: 0 0 15px var(--souls-gold);
+}
+
+/* 3. 血條感進度條 */
+.souls-progress-container {
+    width: 100%;
+    height: 10px;
+    background: #222;
+    border: 1px solid #444;
+}
+
+.souls-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--souls-blood), #ff0000);
+    box-shadow: 0 0 10px var(--souls-blood);
+    width: 70%; /* 範例數值 */
+}
